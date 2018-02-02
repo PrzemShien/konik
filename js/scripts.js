@@ -41,3 +41,10 @@ $(function($)
 			else $('#gora').fadeOut();		
 		}
 		);
+
+
+
+
+
+
+

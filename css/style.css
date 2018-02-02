@@ -22,6 +22,56 @@ a {
   text-decoration: none;
   color: #000; }
 
+@media only screen and (max-width: 520px) {
+  header img {
+    width: 54px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+  header {
+    width: 300px;
+    height: 50px;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 5px; }
+
+  h1 div:nth-of-type(1) {
+    text-align: right;
+    float: left;
+    height: 40px;
+    line-height: 20px;
+    margin-right: 5px; }
+
+  h1 div:nth-of-type(2) {
+    text-align: left;
+    height: 40px;
+    line-height: 20px; }
+
+  h1 div:nth-of-type(3) {
+    border: 1px solid orange;
+    position: absolute;
+    top: 25px;
+    width: 200px; }
+
+  nav {
+    position: static; }
+    nav ul {
+      list-style: none; }
+      nav ul li {
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        background-color: #E89404;
+        border-bottom: 2px white solid; }
+        nav ul li a {
+          color: #4E3A08;
+          font-size: 1.3rem; } }
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%; } }
 @media only screen and (min-width: 521px) {
   #gora {
     position: fixed;
