@@ -77,9 +77,9 @@ a {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    z-index: 2;
-    display: none;
-    overflow: hidden; }
+    z-index: 3;
+    overflow: hidden;
+    display: none; }
     #gora i {
       font-size: 5rem;
       text-decoration: none;

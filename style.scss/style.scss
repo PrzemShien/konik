@@ -100,9 +100,9 @@ a{
 	position: fixed;
 	right: 50px;
 	bottom: 50px;
-    z-index: 2;
-	display: none;
+    z-index: 4;
     overflow: hidden;
+    display: none;
     i{
         font-size: 5rem;
 	    text-decoration: none;
@@ -433,7 +433,7 @@ nav{
             position: absolute;
             right: 15%;
             top: 15%;
-            z-index: 2;
+            z-index: 3;
             height: 60vh;
             width: 40%;                    //23 661 4083 
             border-collapse: collapse;

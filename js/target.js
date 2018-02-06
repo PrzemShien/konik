@@ -2,7 +2,7 @@
 
 $(function(){
     
-    const linkColor = 'orange';
+    const linkColor = 'lightgrey';
     const selector = 'nav a';
     console.log(selector);
     
