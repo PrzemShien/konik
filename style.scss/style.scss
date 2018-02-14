@@ -3,12 +3,6 @@
 @import 'variables';
 
 
-@keyframes animacja {
-  25% {
-    opacity: 1; }
-  37% {
-    opacity: 0; } }
-
 @keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
@@ -165,7 +159,7 @@ nav{
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 3;
+    z-index: 999;
     ul{
         list-style: none;
         @include flexBox();
@@ -192,36 +186,48 @@ nav{
     }
     }
 
-#slider_box {
+#box {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh; }
+    height: 100vh; 
+    .slider{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        .slide{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            img{
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+    }    
+    .arrows a {
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 4rem;
+	color: #fff;
+}
 
-  #slider_box > div {
-    width: 100%;
-    height: 100vh;
-    animation: animacja 20s ease infinite 0s;
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0; }
+    .arrows a:hover {
+        color: #333;
+    }
 
-  #slider_box > div:nth-child(1) {
-    background: url("../img/img.jpg") center/cover no-repeat; }
+    .prev {
+        position: absolute;
+        left: 20px;
+        z-index: 998;
+    }
 
-  #slider_box > div:nth-child(2) {
-    background: url("../img/img2.jpg") center/cover no-repeat;
-    animation-delay: 5s; }
-
-  #slider_box > div:nth-child(3) {
-    background: url("../img/img3.jpg") center/cover no-repeat;
-    animation-delay: 10s; }
-
-  #slider_box > div:nth-child(4) {
-    background: url("../img/img4.jpg") center/cover no-repeat;
-    animation-delay: 15s; }
-
+    .next {
+        position: absolute;
+        right: 20px;
+        z-index: 998;
+    }
+}
     #o_nas{
         background: url('../img/o_nas.jpg') center/cover no-repeat;
         position: relative;
