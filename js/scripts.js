@@ -19,22 +19,48 @@ span[i].addEventListener('click', function(){
     }, true);
 }
 
-let i = 0;
-$(window).on('keydown', function testKey(e){
-    const key = e.keyCode;
-    var tabSec = Array();
+$(function(){
+    const tabSec = Array();
     $('section').each(function(){
         tabSec.push($(this).offset().top);
     });
-        if(key === 40){
-            window.scrollTo(0, tabSec[i]);
-            console.log(tabSec[i] - tabSec[i - 1]);
-            i++;
-    }
-    if(key === 38){
-        window.scrollTo(0,0);
-    }
-});
+    let i = 0;
     
+    function pagePosition(){
+        const Yoffset = $(window).scrollTop();
+         console.log(Yoffset);
+         for(let j = 0; j<tabSec.length; j++){
+            if(Yoffset < tabSec[j]){i++}
+            console.log(i);
+        }
+    }
+    
+    $(window).on('keydown', function(e){
+        const key = e.keyCode;  
+//        pagePosition();
+            
+        if(key === 40){
+            if(i >= tabSec.length){
+                i = 6;
+            }else{$('html').animate({
+                    scrollTop: tabSec[i] -40
+                },1000);
+                i++;}
+            }
 
-
+        if(key === 38){
+            console.log(i);
+            let upPosition = 0;
+            i--;
+            if(i < 0){
+                i = 0;
+            }else{
+                upPosition = tabSec[i] - tabSec[i-1];
+                $('html').animate({
+                    scrollTop: tabSec[i] - upPosition
+                }, 1000);
+//                $(window).scrollTop(tabSec[i] - upPosition);
+            }
+        }
+    });
+});
