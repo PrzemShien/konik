@@ -1,10 +1,8 @@
 'use strict';
 
 var modal = document.querySelectorAll('.modal');
-console.log(modal);
 
 var img = document.querySelectorAll('.myImg');
-console.log(img);
 
 var modalImg = document.querySelectorAll('.modalImg');
 for(let i = 0; i < img.length; i ++){
@@ -20,3 +18,23 @@ span[i].addEventListener('click', function(){
         modal[i].style.display = "none";
     }, true);
 }
+
+let i = 0;
+$(window).on('keydown', function testKey(e){
+    const key = e.keyCode;
+    var tabSec = Array();
+    $('section').each(function(){
+        tabSec.push($(this).offset().top);
+    });
+        if(key === 40){
+            window.scrollTo(0, tabSec[i]);
+            console.log(tabSec[i] - tabSec[i - 1]);
+            i++;
+    }
+    if(key === 38){
+        window.scrollTo(0,0);
+    }
+});
+    
+
+

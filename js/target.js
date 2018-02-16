@@ -4,7 +4,6 @@ $(function(){
     
     const linkColor = 'lightgrey';
     const selector = 'nav a';
-    console.log(selector);
     
     var tabSec = Array();
     
